@@ -1,0 +1,170 @@
+<Patch>
+
+	<!-- Advanced Biomes - Wasteland -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "WastelandAsphalt"]/affordances</xpath>
+		<value>
+			<li>Gravel</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "NuclearWaste"]/changeable</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "NuclearWaste"]/affordances</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "NuclearWaste"]</xpath>
+				<value>
+					<affordances/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "NuclearWaste"]/affordances</xpath>
+		<value>
+			<li>WaterShallow</li>
+		</value>
+	</Operation>
+
+	<!-- Advanced Biomes - Volcano -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "VolcanoSoil"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "VolcanoSoilRich"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+			<li>SoilRich</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "VolcanoObsidian"]/affordances</xpath>
+		<value>
+			<li>RockyDirt</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "Lava"]/changeable</xpath>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "Lava"]/affordances</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "Lava"]</xpath>
+				<value>
+					<affordances/>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ActiveTerrain.SpecialTerrain[defName = "Lava"]/affordances</xpath>
+		<value>
+			<li>WaterShallow</li>
+		</value>
+	</Operation>
+
+	<!-- Advanced Biomes - Savanna -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "SavannaSoil"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "SavannaSoilRich"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+			<li>SoilRich</li>
+		</value>
+	</Operation>
+
+	<!-- Advanced Biomes - PoisonForest -->
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonSoil"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonMarshyTerrain"]/affordances</xpath>
+		<value>
+			<li>SoilMarshy</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonSoilRich"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+			<li>SoilRich</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonMossyTerrain"]/affordances</xpath>
+		<value>
+			<li>SoilF</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonMarsh"]/affordances</xpath>
+		<value>
+			<li>Marsh</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs/TerrainDef[defName = "PoisonMud"]/affordances</xpath>
+		<value>
+			<li>Mud</li>
+		</value>
+	</Operation>
+
+</Patch>
